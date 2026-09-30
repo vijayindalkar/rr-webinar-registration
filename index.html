@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Live Webinar | Regenerative Revival</title>
+<meta name="description" content="A free live webinar for adults 55 and over. Before more shots or a joint replacement, see the regenerative option that comes to your home.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1a1f30">
+<link rel="icon" href="https://regenerativerevival.com/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1a1f30;
+    --navy-deep:#10131e;
+    --ink:#1a1f30;
+    --text:#3b4058;
+    --on-dark:rgba(255,255,255,.84);
+    --purple:#6762af;
+    --blue:#5a6fc4;
+    --sky:#9aa9ff;
+    --lav:#f5f2fb;
+    --lav-tint:#e9e2f7;
+    --lav-line:#d6cbef;
+    --line:#e5e2ee;
+    --radius:20px;
+    --pill:9999px;
+    --btn-grad:linear-gradient(135deg,#6762af 0%,#5a6fc4 100%);
+    --hero-photo:none;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;line-height:1.6;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  h1,h2,h3{margin:0;color:var(--ink);font-weight:600;letter-spacing:-.015em;line-height:1.18}
+  h2{font-size:clamp(28px,3.3vw,42px)}
+  h1,h2{text-wrap:balance}
+  p{margin:0}
+  .container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+  .section{padding:104px 0}
+  .eyebrow{font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sky);margin:0 0 16px}
+  .eyebrow--light{color:var(--purple)}
+  
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 34px;border:0;border-radius:var(--pill);background:var(--btn-grad);color:#fff;font:600 17px/1.2 Poppins,system-ui,sans-serif;text-decoration:none;cursor:pointer;box-shadow:0 12px 30px -12px rgba(103,98,175,.85),inset 0 1px 0 rgba(255,255,255,.2);transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+  .btn:hover{transform:translateY(-1px);filter:brightness(1.07);box-shadow:0 16px 36px -12px rgba(103,98,175,.95)}
+  .btn:focus-visible{outline:3px solid #b9c4ff;outline-offset:3px}
+  .btn svg{width:18px;height:18px;flex:0 0 18px}
+  .btn[disabled]{opacity:.7;cursor:wait;transform:none}
+  .btn-sm{min-height:48px;padding:0 26px;font-size:16px}
+  
+  .sticky{position:fixed;left:0;right:0;top:0;z-index:50;background:rgba(16,19,30,.94);-webkit-backdrop-filter:saturate(140%) blur(12px);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(255,255,255,.08);transform:translateY(-110%);transition:transform .3s ease}
+  .sticky.is-visible{transform:none}
+  .sticky-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}
+  .sticky-text{color:#fff;font-size:16px;line-height:1.4}
+  .sticky-text strong{font-weight:600}
+  .sticky-aud{color:var(--on-dark)}
+  
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--hero-photo);background-size:cover;background-position:70% center}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+      radial-gradient(55% 65% at 88% 18%,rgba(103,98,175,.42),transparent 62%),
+      radial-gradient(45% 55% at 8% 100%,rgba(90,111,196,.28),transparent 62%),
+      linear-gradient(90deg,rgba(16,19,30,.95) 0%,rgba(16,19,30,.86) 48%,rgba(16,19,30,.58) 100%)}
+  .hero-top{padding-top:28px}
+  .hero-logo{height:46px;width:auto;filter:brightness(0) invert(1)}
+  .hero-inner{display:grid;grid-template-columns:minmax(0,60fr) minmax(0,40fr);gap:56px;align-items:center;padding:40px 24px 96px}
+  .hero h1{color:#fff;font-size:clamp(27px,3.6vw,46px);line-height:1.14;margin-bottom:26px}
+  .hero-sub{font-size:19px;font-weight:600;color:#fff;margin-bottom:12px}
+  .hero-list{list-style:none;margin:0 0 32px;padding:0;display:grid;gap:12px}
+  .hero-list li{position:relative;padding-left:26px;font-size:18px;line-height:1.5;color:rgba(255,255,255,.9)}
+  .hero-list li::before{content:"";position:absolute;left:4px;top:.6em;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#a9a3f5,#8ea7ff)}
+  .logistics{font-size:17px;color:var(--on-dark);margin-bottom:22px}
+  .logistics strong{color:#fff;font-weight:600}
+  .presenter-card{justify-self:end;width:100%;max-width:360px;padding:16px;border-radius:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.65)}
+  .headshot{aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#2c3252 0%,#1a1f30 100%);display:grid;place-items:center}
+  .headshot img{width:100%;height:100%;object-fit:cover}
+  .headshot .initials{font-size:64px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.3)}
+  .pc-meta{padding:18px 8px 6px}
+  .pc-name{font-size:20px;font-weight:600;color:#fff}
+  .pc-title{font-size:16px;color:var(--on-dark)}
+  
+  .cred{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.07);padding:18px 0}
+  .cred-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 32px}
+  .cred-list li{font-size:16px;text-align:center;color:var(--on-dark)}
+  
+  .problem-body{max-width:660px;margin:0 auto}
+  .problem h2{margin-bottom:36px}
+  .problem p{font-size:19px;line-height:1.75}
+  .problem p + p{margin-top:26px}
+  
+  .routes{background:var(--lav)}
+  .routes h2{text-align:center;max-width:20em;margin:0 auto 56px}
+  .routes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .route{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px 32px;box-shadow:0 22px 44px -34px rgba(26,31,48,.4)}
+  .route h3{font-size:22px;margin-bottom:14px}
+  .route p{font-size:17px;line-height:1.7}
+  .route p + p{margin-top:14px}
+  .route--third{background:var(--lav-tint);border-color:var(--lav-line)}
+  .route-where{font-weight:600;color:var(--ink)}
+  
+  .learn{background:var(--navy);position:relative;overflow:hidden;isolation:isolate}
+  .learn::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 60% at 0% 0%,rgba(103,98,175,.3),transparent 60%),radial-gradient(40% 50% at 100% 100%,rgba(90,111,196,.22),transparent 60%)}
+  .learn-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+  .learn h2{color:#fff}
+  .learn-list{list-style:none;margin:0 0 44px;padding:0;border-top:1px solid rgba(255,255,255,.12)}
+  .learn-list li{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:18px;line-height:1.6;color:rgba(255,255,255,.76)}
+  .learn-list strong{color:#fff;font-weight:600}
+  
+  .presenter-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:72px;align-items:center}
+  .presenter-photo{aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,#2c3252 0%,#1a1f30 100%);display:grid;place-items:center;box-shadow:0 30px 60px -36px rgba(26,31,48,.6)}
+  .presenter-photo img{width:100%;height:100%;object-fit:cover}
+  .presenter-photo .initials{font-size:84px;font-weight:600;color:rgba(255,255,255,.3)}
+  .presenter h2{margin-bottom:6px}
+  .presenter .role{font-size:18px;font-weight:500;color:var(--purple);margin-bottom:28px}
+  .presenter p.body{font-size:19px;line-height:1.75}
+  .presenter p.body + p.body{margin-top:18px}
+  .presenter strong{color:var(--ink);font-weight:600}
+  
+  .proof{background:var(--lav)}
+  .proof h2{text-align:center;margin-bottom:48px}
+  .proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .quote{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:22px}
+  .quote blockquote{margin:0;font-size:17px;line-height:1.7;color:var(--ink)}
+  .quote blockquote::before{content:"\201C";display:block;font-size:48px;line-height:.8;height:26px;color:var(--purple);font-weight:600}
+  .quote figcaption{margin-top:auto;font-size:16px;color:var(--text)}
+  .quote figcaption strong{color:var(--ink);font-weight:600}
+  .proof-note{text-align:center;margin-top:24px;font-size:16px;color:var(--text)}
+  
+  .fit h2{text-align:center;margin-bottom:48px}
+  .fit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1000px;margin:0 auto}
+  .fit-col{border:1px solid var(--line);border-radius:var(--radius);padding:36px 36px 24px;background:#fff}
+  .fit-col h3{font-size:21px;margin-bottom:18px}
+  .fit-col ul{margin:0;padding-left:22px}
+  .fit-col li{font-size:18px;line-height:1.55;margin-bottom:14px;color:var(--ink)}
+  .fit-col li::marker{color:var(--purple)}
+  
+  .register{background:linear-gradient(180deg,var(--lav) 0%,#eef0fb 100%)}
+  .form-card{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:28px;padding:44px 40px;box-shadow:0 40px 80px -44px rgba(26,31,48,.45)}
+  .form-card h2{font-size:clamp(26px,3vw,34px);text-align:center;margin-bottom:30px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px}
+  .field input{width:100%;min-height:56px;padding:14px 18px;font:400 18px/1.3 Poppins,system-ui,sans-serif;color:var(--ink);background:#fff;border:1.5px solid #cdd0df;border-radius:14px;-webkit-appearance:none;appearance:none}
+  .field input:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 4px rgba(103,98,175,.18)}
+  .err{display:none;margin-top:6px;font-size:16px;color:#b3261e}
+  .has-error input{border-color:#b3261e}
+  .has-error .err{display:block}
+  .situation{border:0;margin:28px 0 8px;padding:0;min-width:0}
+  .situation legend{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:12px;padding:0}
+  .opt{position:relative;display:flex;align-items:center;gap:14px;min-height:56px;padding:12px 16px;margin-bottom:10px;border:1.5px solid #d8dae6;border-radius:14px;background:#fff;font-size:16px;line-height:1.4;color:var(--ink);cursor:pointer;transition:border-color .15s ease,background .15s ease}
+  .opt:hover{border-color:#b3b0dc}
+  .opt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+  .opt .dot{flex:0 0 22px;width:22px;height:22px;border-radius:50%;border:2px solid #a6aac2;display:grid;place-items:center;transition:border-color .15s ease}
+  .opt .dot::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--purple);transform:scale(0);transition:transform .15s ease}
+  .opt.is-checked{border-color:var(--purple);background:#f3f0fb}
+  .opt.is-checked .dot{border-color:var(--purple)}
+  .opt.is-checked .dot::after{transform:scale(1)}
+  .opt:focus-within{outline:3px solid #b9c4ff;outline-offset:2px}
+  .consent{display:flex;align-items:flex-start;gap:14px;min-height:48px;padding:14px 0 18px;font-size:16px;line-height:1.5;color:var(--ink);cursor:pointer}
+  .consent input{flex:0 0 24px;width:24px;height:24px;margin:1px 0 0;accent-color:var(--purple);cursor:pointer}
+  .form-card .btn{width:100%}
+  .under-btn{margin-top:16px;text-align:center;font-size:16px;color:var(--text)}
+  .form-notice{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:16px;background:#fff6db;color:#5c4400;border:1px solid #f1d98a}
+  .form-notice.is-error{background:#fdecea;color:#8a1c14;border-color:#f3b8b2}
+  
+  .faq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:72px;align-items:start}
+  .faq-list{border-top:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line);padding:24px 0}
+  .faq summary{list-style:none;font-size:19px;font-weight:600;line-height:1.4;color:var(--ink);cursor:default}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq .answer{margin-top:10px;font-size:18px;line-height:1.7}
+  
+  .final{background:var(--navy);text-align:center;position:relative;overflow:hidden;isolation:isolate}
+  .final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(45% 80% at 15% 50%,rgba(103,98,175,.45),transparent 65%),radial-gradient(45% 80% at 85% 50%,rgba(90,111,196,.38),transparent 65%)}
+  .final h2{color:#fff;max-width:19em;margin:0 auto 22px}
+  .final .lead{font-size:19px;line-height:1.7;color:var(--on-dark);max-width:34em;margin:0 auto 18px}
+  .final .event-line{font-size:18px;font-weight:600;color:#fff;margin-bottom:30px}
+  .final .micro{margin-top:16px;font-size:16px;color:rgba(255,255,255,.74)}
+  
+  .footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.06);padding:40px 0 48px;font-size:16px;line-height:1.65;color:#cfd2e1}
+  .footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  .footer .legal-row{margin-bottom:16px}
+  .footer .disclaimer{max-width:920px}
+  
+  @media (max-width:960px){
+    .hero-inner{grid-template-columns:minmax(0,1fr);gap:40px;padding-bottom:80px}
+    .presenter-card{justify-self:start;max-width:420px;display:grid;grid-template-columns:120px minmax(0,1fr);align-items:center;gap:18px;padding:12px}
+    .presenter-card .headshot{aspect-ratio:1/1;border-radius:16px}
+    .presenter-card .headshot .initials{font-size:36px}
+    .pc-meta{padding:0}
+    .routes-grid,.proof-grid{grid-template-columns:minmax(0,1fr)}
+    .learn-grid,.faq-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+    .presenter-grid{gap:48px}
+  }
+  
+  @media (max-width:767px){
+    body{font-size:17px}
+    .container{padding:0 16px}
+    .section{padding:72px 0}
+    .sticky{top:auto;bottom:0;border-bottom:0;border-top:1px solid rgba(255,255,255,.1);transform:translateY(110%);padding-bottom:env(safe-area-inset-bottom)}
+    .sticky-inner{min-height:0;padding:10px 16px}
+    .sticky-text{display:none}
+    .sticky .btn{width:100%;min-height:52px}
+    .hero-top{padding-top:16px}
+    .hero-logo{height:34px}
+    .hero-inner{padding:20px 16px 64px}
+    .eyebrow{margin-bottom:10px}
+    .hero h1{font-size:26px;line-height:1.18;margin-bottom:18px}
+    .hero-sub{font-size:17px;margin-bottom:8px}
+    .hero-list{gap:8px;margin-bottom:28px}
+    .hero-list li{font-size:16px;line-height:1.45;padding-left:20px}
+    .hero-list li::before{left:2px;top:.55em;width:7px;height:7px}
+    .hero .btn,.learn .btn,.final .btn{width:100%}
+    .presenter-card{max-width:none;grid-template-columns:96px minmax(0,1fr)}
+    .problem p,.presenter p.body{font-size:18px}
+    .route{padding:28px 24px}
+    .presenter-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+    .presenter-photo{max-width:300px}
+    .fit-grid{grid-template-columns:minmax(0,1fr)}
+    .fit-col{padding:28px 24px 16px}
+    .form-card{padding:32px 20px;border-radius:22px}
+    .faq details{padding:0}
+    .faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:14px 0;font-size:17px;cursor:pointer}
+    .faq summary::after{content:"+";flex:0 0 32px;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--lav-line);display:grid;place-items:center;font-size:22px;font-weight:400;line-height:1;color:var(--purple);transition:transform .2s ease}
+    .faq details[open] summary::after{transform:rotate(45deg)}
+    .faq .answer{margin:0 0 20px;font-size:17px}
+    .footer{padding-bottom:112px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="sticky" id="stickyBar" aria-hidden="true">
+  <div class="container sticky-inner">
+    <p class="sticky-text"><strong>Live on <span data-platform>Zoom</span> · <span data-date>[DATE]</span></strong><span class="sticky-aud"> · For anyone deciding what to do about a worn joint</span></p>
+    <a class="btn btn-sm" href="#register" tabindex="-1">Save my free seat</a>
+  </div>
+</div>
+<header class="hero" id="top">
+  <div class="container hero-top">
+    <img class="hero-logo" src="https://regenerativerevival.com/logo.png" alt="Regenerative Revival" width="115" height="46">
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">For adults 55 and over</p>
+      <h1>Before More Shots or a Joint Replacement, See the Regenerative Option That Comes to Your Home.</h1>
+      <p class="hero-sub">You’re in the right place if:</p>
+      <ul class="hero-list">
+        <li>A surgeon has put a replacement on the calendar, or said one is coming.</li>
+        <li>You were told you’re too young for one, and to wait.</li>
+        <li>Nobody has mentioned a replacement, but a joint is starting to decide what you can do.</li>
+        <li>One joint has already been replaced, and you’d rather not go through that again with the other.</li>
+      </ul>
+      <p class="logistics"><strong><span data-date>[DATE]</span> at <span data-time>[TIME]</span> <span data-zone>[ZONE]</span>.</strong> About an hour, with time for questions.</p>
+      <a class="btn" id="heroCta" href="#register">Save my free seat <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <aside class="presenter-card" aria-label="Presenter">
+      <div class="headshot" data-noah-photo><span class="initials" aria-hidden="true">NN</span></div>
+      <div class="pc-meta">
+        <p class="pc-name">Noah Nelson</p>
+        <p class="pc-title">Chief Education Officer</p>
+      </div>
+    </aside>
+  </div>
+</header>
+<main>
+<section class="cred" aria-label="Medical oversight">
+  <div class="container">
+    <ul class="cred-list">
+      <li>Care overseen by medical director Dr. Sean Arora</li>
+    </ul>
+  </div>
+</section>
+<section class="section problem">
+  <div class="container">
+    <div class="problem-body">
+      <h2>The relief got shorter. The list of things you skip got longer.</h2>
+      <p>First it was pills. Then physical therapy, then a cortisone shot that kept you going for months. The next one lasted weeks. Gel shots came after that, and something stronger you’d rather not take.</p>
+      <p>Meanwhile, you adjusted. You sit out the long walk. You take the stairs one at a time, with a hand on the rail. When the grandkids are down on the floor, you’re watching from a chair.</p>
+      <p>And every appointment lands in the same place. Keep managing the joint until that stops working, then replace it. No one at those appointments has handed you a plan for keeping it.</p>
+    </div>
+  </div>
+</section>
+<section class="section routes">
+  <div class="container">
+    <h2>Two Routes You Know. This Webinar Is About the Third.</h2>
+    <div class="routes-grid">
+      <article class="route">
+        <h3>Managing it.</h3>
+        <p>Each option buys time by quieting the pain, but none of them repairs the joint.</p>
+      </article>
+      <article class="route">
+        <h3>Replacing it.</h3>
+        <p>A surgeon removes the joint and implants an artificial one. It requires anesthesia and weeks of rehab, and for some people it’s the right choice.</p>
+      </article>
+      <article class="route route--third">
+        <h3>Regenerative treatment.</h3>
+        <p>The body repairs everyday wear and tear on its own. With age, fewer repair cells remain, and they have less direction. This treatment adds both back into the joint to help that repair start again.</p>
+        <p class="route-where">In your home, by a licensed nurse practitioner, under physician oversight.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section learn">
+  <div class="container learn-grid">
+    <h2>What you’ll learn in the hour</h2>
+    <div>
+      <ul class="learn-list">
+        <li><strong>Why the relief from each shot is shorter than the last.</strong> And what the shots were really doing in the joint.</li>
+        <li><strong>How the body’s own repair works, and why it slows down.</strong> Explained without the medical jargon.</li>
+        <li><strong>Why two clinics can both sell “regenerative” treatment and give you different things.</strong> Plus the one question that tells them apart.</li>
+        <li><strong>Who the treatment can work for, and who it can’t.</strong> Including the reasons a physician says no.</li>
+        <li><strong>What happens when the treatment comes to your home.</strong> Who arrives, and how long it takes.</li>
+      </ul>
+      <a class="btn" href="#register">Save my free seat <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+<section class="section presenter">
+  <div class="container presenter-grid">
+    <div class="presenter-photo" data-noah-photo data-lazy="1"><span class="initials" aria-hidden="true">NN</span></div>
+    <div>
+      <p class="eyebrow eyebrow--light">Meet your presenter</p>
+      <h2>Noah Nelson</h2>
+      <p class="role">Chief Education Officer, Regenerative Revival</p>
+      <p class="body">Noah teaches this two or three times a week. Most of what he knows, he learned in the living rooms of people in your spot.</p>
+      <p class="body"><strong>Dr. Sean Arora</strong> develops the treatment protocols and decides whether each case moves forward.</p>
+    </div>
+  </div>
+</section>
+<section class="section fit">
+  <div class="container">
+    <h2>Is this webinar a good fit?</h2>
+    <div class="fit-grid">
+      <div class="fit-col">
+        <h3>It’s a good fit if:</h3>
+        <ul>
+          <li>You want to hear every option before you agree to a replacement.</li>
+          <li>You’d like to keep your own joint for as long as you reasonably can.</li>
+          <li>You’ve seen a price for regenerative treatment and aren’t sure what it covered.</li>
+          <li>You’re new to all of this and want it explained from the start.</li>
+        </ul>
+      </div>
+      <div class="fit-col">
+        <h3>It’s probably not a fit if:</h3>
+        <ul>
+          <li>You’re looking for one pill or one shot that ends the pain by the weekend.</li>
+          <li>You’ve chosen the replacement and feel settled about it.</li>
+          <li>The joint isn’t holding you back from anything.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section register" id="register">
+  <div class="container">
+    <div class="form-card">
+      <h2>Where should we send your <span data-platform>Zoom</span> link?</h2>
+      <form id="regForm" novalidate>
+        <div class="field" data-field="first_name">
+          <label for="f-first">First name</label>
+          <input id="f-first" name="first_name" type="text" autocomplete="given-name" required aria-describedby="e-first">
+          <p class="err" id="e-first" role="alert"></p>
+        </div>
+        <div class="field" data-field="last_name">
+          <label for="f-last">Last name</label>
+          <input id="f-last" name="last_name" type="text" autocomplete="family-name" required aria-describedby="e-last">
+          <p class="err" id="e-last" role="alert"></p>
+        </div>
+        <div class="field" data-field="email">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="e-email">
+          <p class="err" id="e-email" role="alert"></p>
+        </div>
+        <div class="field" data-field="phone">
+          <label for="f-phone">Mobile</label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required aria-describedby="e-phone">
+          <p class="err" id="e-phone" role="alert"></p>
+        </div>
+        <fieldset class="situation" data-field="situation">
+          <legend>Which of these sounds most like you?</legend>
+          <label class="opt"><input type="radio" name="situation" value="My surgeon has given me a date, or says a replacement is coming." required><span class="dot" aria-hidden="true"></span><span>My surgeon has given me a date, or says a replacement is coming.</span></label>
+          <label class="opt"><input type="radio" name="situation" value="I've been told I'm too young for a replacement and should wait."><span class="dot" aria-hidden="true"></span><span>I’ve been told I’m too young for a replacement and should wait.</span></label>
+          <label class="opt"><input type="radio" name="situation" value="I've already had one joint replaced, and the other one is heading the same way."><span class="dot" aria-hidden="true"></span><span>I’ve already had one joint replaced, and the other one is heading the same way.</span></label>
+          <label class="opt"><input type="radio" name="situation" value="The shots used to last months. Now they barely last weeks."><span class="dot" aria-hidden="true"></span><span>The shots used to last months. Now they barely last weeks.</span></label>
+          <label class="opt"><input type="radio" name="situation" value="I've given up things I'd like to get back to."><span class="dot" aria-hidden="true"></span><span>I’ve given up things I’d like to get back to.</span></label>
+          <label class="opt"><input type="radio" name="situation" value="I've paid for a regenerative treatment before, and it didn't help."><span class="dot" aria-hidden="true"></span><span>I’ve paid for a regenerative treatment before, and it didn’t help.</span></label>
+          <label class="opt"><input type="radio" name="situation" value="I've heard about regenerative treatment and want to know if it's real."><span class="dot" aria-hidden="true"></span><span>I’ve heard about regenerative treatment and want to know if it’s real.</span></label>
+          <p class="err" role="alert"></p>
+        </fieldset>
+        
+        <label class="consent"><input type="checkbox" name="sms_consent" value="yes"><span>Text me the link and reminders about this webinar.</span></label>
+        <input type="hidden" name="sms_consent_at" value="">
+        <input type="hidden" name="webinar_date" value="">
+        <input type="hidden" name="landing_page" value="">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="fbclid" value="">
+        <input type="hidden" name="gclid" value="">
+        <button class="btn" type="submit" id="submitBtn">Save my free seat</button>
+        
+        <p class="under-btn" data-recording-line="recording" hidden>Can’t join live? Sign up anyway, and we’ll send you the recording.</p>
+        <p class="under-btn" data-recording-line="summary" hidden>Can’t join live? Sign up anyway, and we’ll email you a short summary afterward.</p>
+        <p class="form-notice" id="formNotice" role="status" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="section faq">
+  <div class="container faq-grid">
+    <h2>Questions people ask before they sign up</h2>
+    <div class="faq-list">
+      <details><summary>Is Noah going to try to sell me something?</summary><div class="answer"><p>No. There’s nothing to buy during the webinar. Noah teaches and answers questions, and what you do afterward is up to you.</p></div></details>
+      <details><summary>Is this FDA approved?</summary><div class="answer"><p>No. Regenerative treatments are considered off-label for most joint uses, which is common across medicine. Noah explains what that means, plainly, during the webinar.</p></div></details>
+      <details><summary>Does this use embryos?</summary><div class="answer"><p>No. The tissue comes from healthy full-term births, donated with consent, through accredited tissue banks. Noah walks through how each batch is tested before it’s used.</p></div></details>
+      <details><summary>Do I need an X-ray or MRI first?</summary><div class="answer"><p>No. If you already have one, hang on to it for later.</p></div></details>
+      <details><summary>Does it cover joints other than knees?</summary><div class="answer"><p>Yes. Regenerative Revival treats knees, hips, shoulders, backs, necks, elbows, ankles, and wrists.</p></div></details>
+      <details><summary>Can my husband or wife watch too?</summary><div class="answer"><p>Yes. Sit down together in front of one screen, and you’ll both hear the same thing.</p></div></details>
+      <details><summary>I already have a date for the replacement. Is it worth coming?</summary><div class="answer"><p>Yes. No one will ask you to cancel anything. You’ll just go into that date knowing all three routes.</p></div></details>
+    </div>
+  </div>
+</section>
+<section class="section final" id="final-cta">
+  <div class="container">
+    <h2>The goal is ordinary. The floor with the grandkids, and the stairs without the rail.</h2>
+    <p class="lead">Before anyone schedules the next shot or the replacement, give Noah an hour and see all three routes.</p>
+    <p class="event-line"><span data-date>[DATE]</span> at <span data-time>[TIME]</span> <span data-zone>[ZONE]</span>, live on <span data-platform>Zoom</span>. Free.</p>
+    <a class="btn" href="#register">Save my free seat <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <p class="micro">We never sell your information.</p>
+  </div>
+</section>
+</main>
+<footer class="footer" id="site-footer">
+  <div class="container">
+    <p class="legal-row">© <span data-year>[YEAR]</span> Regenerative Revival. All rights reserved. · <a href="https://regenerativerevival.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> · <a href="https://regenerativerevival.com/terms-conditions/" target="_blank" rel="noopener">Terms</a></p>
+    <p class="disclaimer">Statements on this site have not been evaluated by the FDA. Our services are not intended to diagnose, treat, cure, or prevent any disease. Individual results vary. Regenerative therapies are considered off-label for most musculoskeletal applications. Candidacy is determined by physician evaluation.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var CONFIG = {
+    platform: 'Zoom',
+    date: '',
+    time: '',
+    zone: '',
+    year: '2026',
+    heroPhoto: '',
+    noahPhoto: '',
+    recordingLine: 'summary',
+    showTestimonials: false,
+    submitUrl: '',
+    thankYouUrl: ''
+  };
+  var TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
+  
+  function fill(selector, value, placeholder) {
+    document.querySelectorAll(selector).forEach(function (el) { el.textContent = value || placeholder; });
+  }
+  fill('[data-platform]', CONFIG.platform, 'Zoom');
+  fill('[data-date]', CONFIG.date, '[DATE]');
+  fill('[data-time]', CONFIG.time, '[TIME]');
+  fill('[data-zone]', CONFIG.zone, '[ZONE]');
+  fill('[data-year]', CONFIG.year, String(new Date().getFullYear()));
+  
+  if (CONFIG.heroPhoto) {
+    document.querySelector('.hero').style.setProperty('--hero-photo', 'url("' + CONFIG.heroPhoto + '")');
+  }
+  if (CONFIG.noahPhoto) {
+    document.querySelectorAll('[data-noah-photo]').forEach(function (box) {
+      var img = new Image();
+      img.src = CONFIG.noahPhoto;
+      img.alt = 'Noah Nelson';
+      if (box.hasAttribute('data-lazy')) img.loading = 'lazy';
+      box.innerHTML = '';
+      box.appendChild(img);
+    });
+  }
+  
+  document.querySelectorAll('[data-recording-line]').forEach(function (el) {
+    el.hidden = el.getAttribute('data-recording-line') !== CONFIG.recordingLine;
+  });
+  var proof = document.getElementById('patient-stories');
+  if (proof) proof.hidden = !CONFIG.showTestimonials;
+  
+  var bar = document.getElementById('stickyBar');
+  var barLink = bar.querySelector('a');
+  var passedHero = false;
+  var blockers = [];
+  function updateBar() {
+    var show = passedHero && blockers.length === 0;
+    bar.classList.toggle('is-visible', show);
+    bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+    barLink.tabIndex = show ? 0 : -1;
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { passedHero = !e.isIntersecting && e.boundingClientRect.top < 0; });
+      updateBar();
+    }).observe(document.getElementById('heroCta'));
+    var blockObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var i = blockers.indexOf(e.target);
+        if (e.isIntersecting && i === -1) blockers.push(e.target);
+        if (!e.isIntersecting && i > -1) blockers.splice(i, 1);
+      });
+      updateBar();
+    });
+    ['register', 'final-cta', 'site-footer'].forEach(function (id) { blockObserver.observe(document.getElementById(id)); });
+  }
+  
+  var desktop = window.matchMedia('(min-width: 768px)');
+  var faqItems = document.querySelectorAll('.faq details');
+  function syncFaq() {
+    faqItems.forEach(function (d) {
+      d.open = desktop.matches;
+      d.querySelector('summary').tabIndex = desktop.matches ? -1 : 0;
+    });
+  }
+  syncFaq();
+  if (desktop.addEventListener) desktop.addEventListener('change', syncFaq); else desktop.addListener(syncFaq);
+  document.querySelectorAll('.faq summary').forEach(function (s) {
+    s.addEventListener('click', function (e) { if (desktop.matches) e.preventDefault(); });
+  });
+  
+  var form = document.getElementById('regForm');
+  var submitBtn = document.getElementById('submitBtn');
+  var notice = document.getElementById('formNotice');
+  var params = new URLSearchParams(window.location.search);
+  TRACKING_KEYS.forEach(function (k) { if (params.get(k)) form.elements[k].value = params.get(k); });
+  form.elements.landing_page.value = window.location.origin + window.location.pathname;
+  form.elements.webinar_date.value = [CONFIG.date, CONFIG.time, CONFIG.zone].filter(Boolean).join(' ');
+  var sms = form.elements.sms_consent;
+  sms.addEventListener('change', function () {
+    form.elements.sms_consent_at.value = sms.checked ? new Date().toISOString() : '';
+  });
+  var options = form.querySelectorAll('.opt');
+  options.forEach(function (opt) {
+    opt.querySelector('input').addEventListener('change', function () {
+      options.forEach(function (o) { o.classList.toggle('is-checked', o.querySelector('input').checked); });
+      clearError('situation');
+    });
+  });
+  function fieldWrap(name) { return form.querySelector('[data-field="' + name + '"]'); }
+  function setError(name, message) {
+    var wrap = fieldWrap(name);
+    wrap.classList.add('has-error');
+    wrap.querySelector('.err').textContent = message;
+    var input = wrap.querySelector('input:not([type="radio"])');
+    if (input) input.setAttribute('aria-invalid', 'true');
+  }
+  function clearError(name) {
+    var wrap = fieldWrap(name);
+    wrap.classList.remove('has-error');
+    wrap.querySelector('.err').textContent = '';
+    var input = wrap.querySelector('input:not([type="radio"])');
+    if (input) input.removeAttribute('aria-invalid');
+  }
+  ['first_name', 'last_name', 'email', 'phone'].forEach(function (name) {
+    form.elements[name].addEventListener('input', function () { clearError(name); });
+  });
+  function showNotice(message, isError) {
+    notice.textContent = message;
+    notice.classList.toggle('is-error', !!isError);
+    notice.hidden = false;
+  }
+  function phoneDigits(value) {
+    var d = value.replace(/\D/g, '');
+    if (d.length === 11 && d.charAt(0) === '1') d = d.slice(1);
+    return d;
+  }
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    notice.hidden = true;
+    var errors = [];
+    var first = form.elements.first_name.value.trim();
+    var last = form.elements.last_name.value.trim();
+    var email = form.elements.email.value.trim();
+    var digits = phoneDigits(form.elements.phone.value);
+    var situation = form.querySelector('input[name="situation"]:checked');
+    if (!first) errors.push(['first_name', 'Please enter your first name.']);
+    if (!last) errors.push(['last_name', 'Please enter your last name.']);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errors.push(['email', 'Please enter a valid email address.']);
+    if (digits.length !== 10) errors.push(['phone', 'Please enter a 10-digit mobile number.']);
+    if (!situation) errors.push(['situation', 'Please choose the one that sounds most like you.']);
+    if (errors.length) {
+      errors.forEach(function (e) { setError(e[0], e[1]); });
+      var firstBad = fieldWrap(errors[0][0]).querySelector('input');
+      firstBad.focus();
+      return;
+    }
+    if (sms.checked && !form.elements.sms_consent_at.value) {
+      form.elements.sms_consent_at.value = new Date().toISOString();
+    }
+    var data = new URLSearchParams(new FormData(form));
+    data.set('first_name', first);
+    data.set('last_name', last);
+    data.set('email', email);
+    data.set('phone', '+1' + digits);
+    data.set('sms_consent', sms.checked ? 'yes' : 'no');
+    data.set('submitted_at', new Date().toISOString());
+    if (!CONFIG.submitUrl) {
+      showNotice('Preview only: this form is not connected yet.');
+      if (window.console) console.info('Registration payload (preview):', Object.fromEntries(data));
+      return;
+    }
+    var label = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Saving your seat…';
+    fetch(CONFIG.submitUrl, { method: 'POST', mode: 'no-cors', body: data, keepalive: true })
+      .then(function () {
+        if (!CONFIG.thankYouUrl) {
+          submitBtn.textContent = label;
+          showNotice('You’re registered. Check your email for your link.');
+          form.reset();
+          options.forEach(function (o) { o.classList.remove('is-checked'); });
+          return;
+        }
+        var q = new URLSearchParams();
+        TRACKING_KEYS.forEach(function (k) { if (params.get(k)) q.set(k, params.get(k)); });
+        var qs = q.toString();
+        window.location.href = CONFIG.thankYouUrl + (qs ? (CONFIG.thankYouUrl.indexOf('?') > -1 ? '&' : '?') + qs : '');
+      })
+      .catch(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = label;
+        showNotice('Something went wrong saving your seat. Please check your connection and try again.', true);
+      });
+  });
+})();
+</script>
+</body>
+</html>
