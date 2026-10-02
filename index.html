@@ -122,12 +122,14 @@
   
   .routes{background:var(--lav)}
   .routes h2{text-align:center;max-width:20em;margin:0 auto 56px}
-  .routes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+  .routes-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-rows:auto auto;gap:24px;max-width:1040px;margin:0 auto}
+  .route--third{grid-column:2;grid-row:1 / span 2}
+  .route{display:flex;flex-direction:column;justify-content:center}
   .route{background:#fff;border:1px solid #fff;border-radius:var(--radius);padding:36px 32px;box-shadow:var(--luxe-shadow);overflow:hidden}
   .route h3{font-size:22px;margin-bottom:14px}
   .route p{font-size:17px;line-height:1.7}
   .route p + p{margin-top:14px}
-  .route--third{background:var(--lav-tint);border-color:var(--lav-line);box-shadow:var(--luxe-shadow),0 0 0 1px rgba(103,98,175,.12)}
+  .route.route--third{padding:44px 40px;background:var(--lav-tint);border-color:var(--lav-line);box-shadow:var(--luxe-shadow),0 0 0 1px rgba(103,98,175,.12)}
   .route-media{margin:-36px -32px 28px;aspect-ratio:3/2;background:#ddd5ee}
   .route-media img{width:100%;height:100%;object-fit:cover}
   .route-where{font-weight:600;color:var(--ink)}
@@ -231,6 +233,7 @@
     .presenter-card .headshot{aspect-ratio:1/1;border-radius:50%;box-shadow:0 0 0 2px rgba(103,98,175,.55)}
     .pc-meta{padding:0}
     .routes-grid,.proof-grid{grid-template-columns:minmax(0,1fr)}
+    .route--third{grid-column:auto;grid-row:auto}
     .learn-grid,.faq-grid{grid-template-columns:minmax(0,1fr);gap:32px}
     .learn-media{aspect-ratio:16/10;margin-top:24px}
     .presenter-grid{gap:48px}
@@ -280,7 +283,7 @@
     .problem p + p{margin-top:20px}
     .routes h2{margin-bottom:32px}
     .routes-grid{gap:16px}
-    .route{padding:26px 22px}
+    .route,.route.route--third{padding:26px 22px}
     .route-media{margin:-26px -22px 22px;aspect-ratio:16/9}
     .route h3{font-size:20px;margin-bottom:10px}
     .learn-list li{padding:18px 0;font-size:17px}
@@ -389,7 +392,6 @@
         <p>A surgeon removes the joint and implants an artificial one. It requires anesthesia and weeks of rehab, and for some people it’s the right choice.</p>
       </article>
       <article class="route route--third">
-        <div class="route-media" data-image-slot="homeVisit" hidden></div>
         <h3>Regenerative treatment.</h3>
         <p>The body repairs everyday wear and tear on its own. With age, fewer repair cells remain, and they have less direction. This treatment adds both back into the joint to help that repair start again.</p>
         <p class="route-where">In your home, by a licensed nurse practitioner, under physician oversight.</p>
@@ -555,8 +557,7 @@
     },
     images: {
       hero: 'assets/hero-lifestyle.webp',
-      learn: 'assets/learn-portrait.webp',
-      homeVisit: 'assets/home-visit.webp',
+      learn: '',
       finalCta: ''
     },
     recordingLine: '',
