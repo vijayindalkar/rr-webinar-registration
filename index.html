@@ -70,7 +70,7 @@
       radial-gradient(45% 55% at 8% 100%,rgba(90,111,196,.28),transparent 62%),
       linear-gradient(90deg,rgba(17,20,31,.95) 0%,rgba(17,20,31,.86) 48%,rgba(17,20,31,.58) 100%)}
   .hero-top{padding-top:28px}
-  .hero-logo{height:48px;width:auto;filter:brightness(0) invert(1)}
+  .hero-logo{height:48px;width:auto}
   .hero-inner{display:grid;grid-template-columns:minmax(0,60fr) minmax(0,40fr);gap:56px;align-items:center;padding:28px 24px 132px}
   .hero h1{color:#fff;font-size:clamp(27px,3.4vw,46px);line-height:1.12;margin-bottom:22px}
   .hero-sub{font-size:19px;font-weight:600;color:#fff;margin-bottom:12px}
@@ -187,10 +187,15 @@
   .faq{background:var(--off)}
   .faq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:72px;align-items:start}
   .faq-list{border-top:1px solid var(--line)}
-  .faq details{border-bottom:1px solid var(--line);padding:24px 0}
-  .faq summary{list-style:none;font-size:19px;font-weight:600;line-height:1.4;color:var(--ink);cursor:default}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px;padding:18px 0;font-size:19px;font-weight:600;line-height:1.4;color:var(--ink);cursor:pointer;touch-action:manipulation}
   .faq summary::-webkit-details-marker{display:none}
-  .faq .answer{margin-top:10px;font-size:18px;line-height:1.7}
+  .faq summary:hover{color:var(--purple)}
+  .faq summary:focus-visible{outline:3px solid #b9c4ff;outline-offset:4px;border-radius:8px}
+  .faq summary::after{content:"+";flex:0 0 36px;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--lav-line);background:#fff;display:grid;place-items:center;font-size:24px;font-weight:400;line-height:1;color:var(--purple);transition:transform .25s ease,background .2s ease,color .2s ease}
+  .faq details[open] summary::after{transform:rotate(45deg);background:var(--purple);border-color:var(--purple);color:#fff}
+  .faq .answer{margin:0 0 22px;padding-right:56px;font-size:18px;line-height:1.7;animation:faqIn .25s ease}
+  @keyframes faqIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
   
   .final{background:var(--navy);text-align:center;position:relative;overflow:hidden;isolation:isolate}
   .final::before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--final-photo);background-size:cover;background-position:center}
@@ -275,11 +280,9 @@
     .form-card{padding:28px 18px;border-radius:22px;box-shadow:0 20px 50px -30px rgba(26,31,48,.4)}
     .form-card h2{font-size:25px;margin-bottom:22px}
     .name-row{gap:10px}
-    .faq details{padding:0}
-    .faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:14px 0;font-size:17px;cursor:pointer}
-    .faq summary::after{content:"+";flex:0 0 32px;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--lav-line);display:grid;place-items:center;font-size:22px;font-weight:400;line-height:1;color:var(--purple);transition:transform .2s ease}
-    .faq details[open] summary::after{transform:rotate(45deg)}
-    .faq .answer{margin:0 0 20px;font-size:17px}
+    .faq summary{gap:16px;min-height:60px;padding:14px 0;font-size:17px}
+    .faq summary::after{flex-basis:32px;width:32px;height:32px;font-size:22px}
+    .faq .answer{margin-bottom:20px;padding-right:0;font-size:17px}
     .final .lead{font-size:18px}
     .footer{padding-bottom:128px}
   }
@@ -302,7 +305,7 @@
 </div>
 <header class="hero" id="top">
   <div class="container hero-top">
-    <img class="hero-logo" src="assets/regenerative-revival-logo.png" alt="Regenerative Revival" width="120" height="48">
+    <img class="hero-logo" src="assets/regenerative-revival-logo-light.webp" alt="Regenerative Revival" width="111" height="48">
   </div>
   <div class="container hero-inner">
     <div class="hero-copy">
@@ -494,7 +497,6 @@
     <h2>Questions people ask before they sign up</h2>
     <div class="faq-list">
       <details><summary>Is Noah going to try to sell me something?</summary><div class="answer"><p>No. There’s nothing to buy during the webinar. Noah teaches and answers questions, and what you do afterward is up to you.</p></div></details>
-      <details><summary>Is this FDA approved?</summary><div class="answer"><p>No. Regenerative treatments are considered off-label for most joint uses, which is common across medicine. Noah explains what that means, plainly, during the webinar.</p></div></details>
       <details><summary>Does this use embryos?</summary><div class="answer"><p>No. The tissue comes from healthy full-term births, donated with consent, through accredited tissue banks. Noah walks through how each batch is tested before it’s used.</p></div></details>
       <details><summary>Do I need an X-ray or MRI first?</summary><div class="answer"><p>No. If you already have one, hang on to it for later.</p></div></details>
       <details><summary>Does it cover joints other than knees?</summary><div class="answer"><p>Yes. Regenerative Revival treats knees, hips, shoulders, backs, necks, elbows, ankles, and wrists.</p></div></details>
@@ -601,18 +603,11 @@
     ['register', 'final-cta', 'site-footer'].forEach(function (id) { blockObserver.observe(document.getElementById(id)); });
   }
   
-  var desktop = window.matchMedia('(min-width: 768px)');
   var faqItems = document.querySelectorAll('.faq details');
-  function syncFaq() {
-    faqItems.forEach(function (d) {
-      d.open = desktop.matches;
-      d.querySelector('summary').tabIndex = desktop.matches ? -1 : 0;
+  faqItems.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (d.open) faqItems.forEach(function (other) { if (other !== d) other.open = false; });
     });
-  }
-  syncFaq();
-  if (desktop.addEventListener) desktop.addEventListener('change', syncFaq); else desktop.addListener(syncFaq);
-  document.querySelectorAll('.faq summary').forEach(function (s) {
-    s.addEventListener('click', function (e) { if (desktop.matches) e.preventDefault(); });
   });
   
   var form = document.getElementById('regForm');
