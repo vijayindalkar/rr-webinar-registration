@@ -236,11 +236,12 @@
   .final .event-line{font-size:18px;font-weight:600;color:#fff;margin-bottom:30px}
   .final .micro{margin-top:16px;font-size:16px;color:rgba(255,255,255,.74)}
   
-  .footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.05);padding:40px 0 48px;font-size:16px;line-height:1.65;color:#7c81a3}
+  .footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.05);padding:40px 0 48px;font-size:16px;line-height:1.65;color:#7c81a3;text-align:center}
   .footer a{color:inherit;text-decoration:underline;text-decoration-color:rgba(124,129,163,.5);text-underline-offset:3px;transition:color .2s ease}
   .footer a:hover{color:#b4b9d8}
   .footer .legal-row{margin-bottom:16px}
-  .footer .disclaimer{max-width:920px}
+  .footer .disclaimer{max-width:920px;margin:0 auto}
+  .footer .legal-links{white-space:nowrap}
   
   @media (max-width:960px){
     .hero-inner{grid-template-columns:minmax(0,1fr);gap:36px;padding-bottom:124px}
@@ -323,7 +324,9 @@
     .faq summary::after{flex-basis:32px;width:32px;height:32px;font-size:22px}
     .faq .answer{margin-bottom:20px;padding-right:0;font-size:17px}
     .final .lead{font-size:18px}
-    .footer{padding-bottom:128px}
+    .footer{padding-bottom:56px}
+    .footer .sep-first{display:none}
+    .footer .legal-links{display:block;margin-top:2px}
   }
   @media (max-width:359px){
     .name-row{grid-template-columns:1fr;gap:0}
@@ -572,7 +575,7 @@
 </main>
 <footer class="footer" id="site-footer">
   <div class="container">
-    <p class="legal-row">© <span data-year>2026</span> Regenerative Revival. All rights reserved. · <a href="https://regenerativerevival.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> · <a href="https://regenerativerevival.com/terms-conditions/" target="_blank" rel="noopener">Terms</a></p>
+    <p class="legal-row">© <span data-year>2026</span> Regenerative Revival. All rights reserved. <span class="sep-first">·</span> <span class="legal-links"><a href="https://regenerativerevival.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> · <a href="https://regenerativerevival.com/terms-conditions/" target="_blank" rel="noopener">Terms</a></span></p>
     <p class="disclaimer">Statements on this site have not been evaluated by the FDA. Our services are not intended to diagnose, treat, cure, or prevent any disease. Individual results vary. Regenerative therapies are considered off-label for most musculoskeletal applications. Candidacy is determined by physician evaluation.</p>
   </div>
 </footer>
