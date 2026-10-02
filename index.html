@@ -120,18 +120,22 @@
   .problem p{font-size:19px;line-height:1.75}
   .problem p + p{margin-top:26px}
   
-  .routes{background:var(--lav)}
+  .routes{background:#fff;position:relative;overflow:hidden;isolation:isolate}
+  .routes::before{content:"";position:absolute;left:50%;top:-10%;width:900px;height:500px;transform:translateX(-50%);z-index:-1;background:radial-gradient(closest-side,rgba(241,236,248,.9),transparent)}
   .routes h2{text-align:center;max-width:20em;margin:0 auto 56px}
-  .routes-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-rows:auto auto;gap:24px;max-width:1040px;margin:0 auto}
-  .route--third{grid-column:2;grid-row:1 / span 2}
-  .route{display:flex;flex-direction:column;justify-content:center}
-  .route{background:#fff;border:1px solid #fff;border-radius:var(--radius);padding:36px 32px;box-shadow:var(--luxe-shadow);overflow:hidden}
-  .route h3{font-size:22px;margin-bottom:14px}
+  .routes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .route{--card:#f4f1fa;position:relative;display:flex;flex-direction:column;background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--soft-shadow)}
+  .route--third{--card:#e9e2f7;box-shadow:var(--luxe-shadow),0 0 0 1.5px rgba(103,98,175,.22)}
+  .route-media{position:relative;height:230px;background:linear-gradient(135deg,#e6def5 0%,#dce7fb 100%)}
+  .route-media img{width:100%;height:100%;object-fit:cover}
+  .route-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--card) 100%)}
+  .route-num{position:absolute;top:18px;left:18px;z-index:1;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:16px;font-weight:600}
+  .route-body{padding:4px 32px 36px;margin-top:-28px;position:relative;z-index:1}
+  .route-icon{width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--purple);box-shadow:0 6px 16px -10px rgba(103,98,175,.5);margin-bottom:22px}
+  .route-icon svg{width:24px;height:24px}
+  .route h3{font-size:26px;font-weight:500;letter-spacing:-.02em;margin-bottom:12px}
   .route p{font-size:17px;line-height:1.7}
   .route p + p{margin-top:14px}
-  .route.route--third{padding:44px 40px;background:var(--lav-tint);border-color:var(--lav-line);box-shadow:var(--luxe-shadow),0 0 0 1px rgba(103,98,175,.12)}
-  .route-media{margin:-36px -32px 28px;aspect-ratio:3/2;background:#ddd5ee}
-  .route-media img{width:100%;height:100%;object-fit:cover}
   .route-where{font-weight:600;color:var(--ink)}
   
   .learn{background:var(--navy-deep);position:relative;overflow:hidden;isolation:isolate}
@@ -232,8 +236,8 @@
     .presenter-card{justify-self:start;max-width:440px;display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;gap:16px;padding:12px}
     .presenter-card .headshot{aspect-ratio:1/1;border-radius:50%;box-shadow:0 0 0 2px rgba(103,98,175,.55)}
     .pc-meta{padding:0}
-    .routes-grid,.proof-grid{grid-template-columns:minmax(0,1fr)}
-    .route--third{grid-column:auto;grid-row:auto}
+    .routes-grid{grid-template-columns:minmax(0,1fr);max-width:560px;margin:0 auto}
+    .proof-grid{grid-template-columns:minmax(0,1fr)}
     .learn-grid,.faq-grid{grid-template-columns:minmax(0,1fr);gap:32px}
     .learn-media{aspect-ratio:16/10;margin-top:24px}
     .presenter-grid{gap:48px}
@@ -283,9 +287,10 @@
     .problem p + p{margin-top:20px}
     .routes h2{margin-bottom:32px}
     .routes-grid{gap:16px}
-    .route,.route.route--third{padding:26px 22px}
-    .route-media{margin:-26px -22px 22px;aspect-ratio:16/9}
-    .route h3{font-size:20px;margin-bottom:10px}
+    .route-media{height:190px}
+    .route-body{padding:0 22px 28px}
+    .route-icon{width:46px;height:46px;margin-bottom:16px}
+    .route h3{font-size:22px;margin-bottom:10px}
     .learn-list li{padding:18px 0;font-size:17px}
     .learn-list{margin-bottom:32px}
     .presenter-grid{grid-template-columns:minmax(0,1fr);gap:28px}
@@ -384,17 +389,29 @@
     <h2>Two Routes You Know. This Webinar Is About <span class="grad-text">the Third.</span></h2>
     <div class="routes-grid">
       <article class="route">
-        <h3>Managing it.</h3>
-        <p>Each option buys time by quieting the pain, but none of them repairs the joint.</p>
+        <div class="route-media" data-image-slot="routeManaging"><span class="route-num">1</span></div>
+        <div class="route-body">
+          <span class="route-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></span>
+          <h3>Managing it.</h3>
+          <p>Each option buys time by quieting the pain, but none of them repairs the joint.</p>
+        </div>
       </article>
       <article class="route">
-        <h3>Replacing it.</h3>
-        <p>A surgeon removes the joint and implants an artificial one. It requires anesthesia and weeks of rehab, and for some people it’s the right choice.</p>
+        <div class="route-media" data-image-slot="routeReplacing"><span class="route-num">2</span></div>
+        <div class="route-body">
+          <span class="route-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg></span>
+          <h3>Replacing it.</h3>
+          <p>A surgeon removes the joint and implants an artificial one. It requires anesthesia and weeks of rehab, and for some people it’s the right choice.</p>
+        </div>
       </article>
       <article class="route route--third">
-        <h3>Regenerative treatment.</h3>
-        <p>The body repairs everyday wear and tear on its own. With age, fewer repair cells remain, and they have less direction. This treatment adds both back into the joint to help that repair start again.</p>
-        <p class="route-where">In your home, by a licensed nurse practitioner, under physician oversight.</p>
+        <div class="route-media" data-image-slot="routeRegenerative"><span class="route-num">3</span></div>
+        <div class="route-body">
+          <span class="route-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/><path d="M12 17.5s-3.2-1.9-3.2-4a1.8 1.8 0 0 1 3.2-1.1 1.8 1.8 0 0 1 3.2 1.1c0 2.1-3.2 4-3.2 4Z"/></svg></span>
+          <h3>Regenerative treatment.</h3>
+          <p>The body repairs everyday wear and tear on its own. With age, fewer repair cells remain, and they have less direction. This treatment adds both back into the joint to help that repair start again.</p>
+          <p class="route-where">In your home, by a licensed nurse practitioner, under physician oversight.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -557,6 +574,9 @@
     },
     images: {
       hero: 'assets/hero-lifestyle.webp',
+      routeManaging: '',
+      routeReplacing: '',
+      routeRegenerative: 'assets/route-regenerative.webp',
       learn: '',
       finalCta: ''
     },
@@ -589,7 +609,7 @@
     img.alt = '';
     img.loading = 'lazy';
     img.decoding = 'async';
-    slot.appendChild(img);
+    slot.insertBefore(img, slot.firstChild);
     slot.hidden = false;
   });
   document.querySelectorAll('[data-recording-line]').forEach(function (el) {
