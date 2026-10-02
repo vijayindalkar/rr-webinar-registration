@@ -99,6 +99,8 @@
   .hero-list li::before{content:"";position:absolute;left:4px;top:.6em;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#a9a3f5,#8ea7ff)}
   .logistics{font-size:17px;color:var(--on-dark);margin-bottom:22px}
   .logistics strong{color:#fff;font-weight:600}
+  .chip-icon{display:none}
+  .lead-in{font-weight:inherit;color:inherit}
   .presenter-card{justify-self:end;width:100%;max-width:380px;padding:14px;border-radius:32px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.65)}
   .headshot{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:#e6def5}
   .headshot img{width:100%;height:100%;object-fit:cover;object-position:center top}
@@ -267,13 +269,27 @@
     .sticky-inner{min-height:0;padding:10px 16px}
     .sticky-text{display:none}
     .sticky .btn{width:100%;min-height:52px}
-    .hero-top{padding-top:16px}
-    .hero-logo{height:36px}
+    .hero-top{padding-top:18px}
+    .hero-logo{height:38px;margin:0 auto}
+    .hero-copy{text-align:center}
+    .hero .eyebrow{padding:7px 14px;border-radius:var(--pill);border:1px solid rgba(113,167,245,.35);background:rgba(113,167,245,.1);font-size:12px;letter-spacing:.14em;margin-bottom:14px}
+    .hero .eyebrow::before{display:none}
+    .hero-fit{text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:16px 16px 4px;margin-bottom:18px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+    .hero-fit .hero-list{gap:0;margin-bottom:0}
+    .hero-fit .hero-list li{padding-top:10px;padding-bottom:10px}
+    .hero-fit .hero-list li::before{top:calc(10px + .55em)}
+    .hero-fit .hero-list li + li{border-top:1px solid rgba(255,255,255,.1)}
+    .logistics{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px}
+    .logistics .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--pill);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);font-size:15px;line-height:1.3}
+    .logistics .chip strong{font-weight:600}
+    .chip-icon{display:block;width:17px;height:17px;flex:0 0 17px;color:var(--sky)}
+    .chip-dot{display:none}
+    .lead-in{font-weight:600;color:var(--ink)}
     .hero-inner{padding:20px 16px 112px;gap:28px}
     .eyebrow{font-size:13px;letter-spacing:.18em;gap:10px;margin-bottom:10px}
     .eyebrow::before{width:20px}
     .hero h1{font-size:26px;line-height:1.18;margin-bottom:18px}
-    .hero-sub{font-size:17px;margin-bottom:8px}
+    .hero-sub{font-size:17px;margin-bottom:2px}
     .hero-list{gap:8px;margin-bottom:24px}
     .hero-list li{font-size:16px;line-height:1.45;padding-left:20px}
     .hero-list li::before{left:2px;top:.55em;width:7px;height:7px}
@@ -363,6 +379,7 @@
     <div class="hero-copy">
       <p class="eyebrow">For adults 55 and over</p>
       <h1>Before More Shots or a Joint Replacement, See the Regenerative Option <span class="grad-text--light">That Comes to Your Home.</span></h1>
+      <div class="hero-fit">
       <p class="hero-sub">You’re in the right place if:</p>
       <ul class="hero-list">
         <li>A surgeon has put a replacement on the calendar, or said one is coming.</li>
@@ -370,7 +387,8 @@
         <li>Nobody has mentioned a replacement, but a joint is starting to decide what you can do.</li>
         <li>One joint has already been replaced, and you’d rather not go through that again with the other.</li>
       </ul>
-      <p class="logistics"><strong><span data-when>Date and time to be announced</span>.</strong> About an hour, with time for questions.</p>
+      </div>
+      <p class="logistics"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></svg><strong><span data-when>Date and time to be announced</span><span class="chip-dot">.</span></strong></span> <span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>About an hour, with time for questions<span class="chip-dot">.</span></span></p>
       <a class="btn btn--light" id="heroCta" href="#register"><span class="shine" aria-hidden="true"></span><span>Save my free seat</span> <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <aside class="presenter-card" aria-label="Presenter">
@@ -404,9 +422,9 @@
   <div class="container">
     <div class="problem-body">
       <h2>The relief got shorter. The list of things you skip got longer.</h2>
-      <p>First it was pills. Then physical therapy, then a cortisone shot that kept you going for months. The next one lasted weeks. Gel shots came after that, and something stronger you’d rather not take.</p>
-      <p>Meanwhile, you adjusted. You sit out the long walk. You take the stairs one at a time, with a hand on the rail. When the grandkids are down on the floor, you’re watching from a chair.</p>
-      <p>And every appointment lands in the same place. Keep managing the joint until that stops working, then replace it. No one at those appointments has handed you a plan for keeping it.</p>
+      <p><strong class="lead-in">First it was pills.</strong> Then physical therapy, then a cortisone shot that kept you going for months. The next one lasted weeks. Gel shots came after that, and something stronger you’d rather not take.</p>
+      <p><strong class="lead-in">Meanwhile, you adjusted.</strong> You sit out the long walk. You take the stairs one at a time, with a hand on the rail. When the grandkids are down on the floor, you’re watching from a chair.</p>
+      <p><strong class="lead-in">And every appointment lands in the same place.</strong> Keep managing the joint until that stops working, then replace it. No one at those appointments has handed you a plan for keeping it.</p>
     </div>
   </div>
 </section>
