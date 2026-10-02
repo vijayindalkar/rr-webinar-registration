@@ -133,13 +133,13 @@
   .route.no-media{justify-content:center}
   .route.no-media .route-media{display:none}
   .route.no-media .route-body{margin-top:0;padding-top:32px}
-  .route.no-media .route-num{top:28px;left:auto;right:28px}
+  .route.no-media .route-num{top:28px;right:28px}
   .route{--card:#f4f1fa;position:relative;display:flex;flex-direction:column;background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--soft-shadow)}
   .route--third{--card:#e9e2f7;box-shadow:var(--luxe-shadow),0 0 0 1.5px rgba(103,98,175,.22)}
   .route-media{position:relative;height:230px;background:linear-gradient(135deg,#e6def5 0%,#dce7fb 100%)}
-  .route-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+  .route-media img{width:100%;height:100%;object-fit:cover;object-position:center 8%}
   .route-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--card) 100%)}
-  .route-num{position:absolute;top:18px;left:18px;z-index:1;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:16px;font-weight:600}
+  .route-num{position:absolute;top:18px;right:18px;z-index:1;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:16px;font-weight:600}
   .route-body{padding:4px 32px 36px;margin-top:-28px;position:relative;z-index:1}
   .route-icon{width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--purple);box-shadow:0 6px 16px -10px rgba(103,98,175,.5);margin-bottom:22px}
   .route-icon svg{width:24px;height:24px}
@@ -253,7 +253,8 @@
     .route--third{grid-column:auto;grid-row:auto}
     .proof-grid{grid-template-columns:minmax(0,1fr)}
     .learn-grid,.faq-grid{grid-template-columns:minmax(0,1fr);gap:32px}
-    .learn-media{aspect-ratio:16/10;margin-top:24px}
+    .learn-media{aspect-ratio:4/3;margin-top:24px}
+    .learn-media img{object-position:50% 8%}
     .presenter-grid{gap:48px}
   }
   
@@ -263,14 +264,14 @@
     .section{padding:64px 0}
     h2{font-size:27px}
     .sticky{top:auto;bottom:0;border-bottom:0;border-top:1px solid rgba(255,255,255,.1);transform:translateY(110%);padding-bottom:env(safe-area-inset-bottom)}
-    .sticky-inner{min-height:0;padding:8px 16px 10px;flex-direction:column;gap:6px}
+    .sticky-inner{min-height:0;padding:10px 16px}
     .sticky-text{display:none}
-    .sticky-mobile-label{display:block;font-size:14px;line-height:1.3;color:var(--on-dark);text-align:center}
     .sticky .btn{width:100%;min-height:52px}
     .hero-top{padding-top:16px}
     .hero-logo{height:36px}
     .hero-inner{padding:20px 16px 112px;gap:28px}
-    .eyebrow{font-size:13px;margin-bottom:10px}
+    .eyebrow{font-size:13px;letter-spacing:.18em;gap:10px;margin-bottom:10px}
+    .eyebrow::before{width:20px}
     .hero h1{font-size:26px;line-height:1.18;margin-bottom:18px}
     .hero-sub{font-size:17px;margin-bottom:8px}
     .hero-list{gap:8px;margin-bottom:24px}
@@ -296,12 +297,14 @@
     .trust-label{font-size:14px}
     .trust-quote{padding:16px 14px 18px}
     .trust-quote blockquote{font-size:16px}
+    .problem h2,.learn h2,.faq h2{text-align:center}
     .problem h2{margin-bottom:24px}
     .problem p,.presenter p.body{font-size:18px;line-height:1.7}
     .problem p + p{margin-top:20px}
     .routes h2{margin-bottom:32px}
     .routes-grid{gap:16px}
-    .route-media{height:190px}
+    .route-media{height:230px}
+    .route-num{top:22px;right:22px}
     .route-body{padding:0 22px 28px}
     .route.no-media .route-body{padding-top:26px}
     .route.no-media .route-num{top:22px;right:22px}
@@ -310,13 +313,18 @@
     .learn-list li{padding:18px 0;font-size:17px}
     .learn-list{margin-bottom:32px}
     .presenter-grid{grid-template-columns:minmax(0,1fr);gap:28px}
-    .presenter-photo{max-width:280px;border-radius:24px}
+    .presenter-photo{width:100%;max-width:320px;margin:0 auto;border-radius:24px}
+    .presenter-copy{text-align:center}
+    .presenter p.body{text-align:left}
     .presenter .role{margin-bottom:20px}
     .fit h2{margin-bottom:28px}
     .fit-grid{grid-template-columns:minmax(0,1fr);gap:16px}
     .fit-col{padding:26px 22px 14px}
     .fit-col li{font-size:17px}
-    .register{padding-top:48px}
+    .problem{padding-bottom:36px}
+    .routes{padding-top:36px}
+    .fit{padding-bottom:40px}
+    .register{padding-top:32px}
     .form-card{padding:28px 18px;border-radius:22px;box-shadow:0 20px 50px -30px rgba(26,31,48,.4)}
     .form-card h2{font-size:25px;margin-bottom:22px}
     .name-row{gap:10px}
@@ -460,7 +468,7 @@
     <div class="presenter-photo">
       <img src="assets/noah-nelson-portrait-lavender.webp" alt="Noah Nelson, Chief Education Officer" width="800" height="1000" loading="lazy">
     </div>
-    <div>
+    <div class="presenter-copy">
       <p class="eyebrow eyebrow--light">Meet your presenter</p>
       <h2>Noah Nelson</h2>
       <p class="role">Chief Education Officer, Regenerative Revival</p>
@@ -542,7 +550,7 @@
         <input type="hidden" name="utm_term" value="">
         <input type="hidden" name="fbclid" value="">
         <input type="hidden" name="gclid" value="">
-        <button class="btn" type="submit" id="submitBtn">Save my free seat</button>
+        <button class="btn" type="submit" id="submitBtn">Save my free seat <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <p class="under-btn" data-recording-line="recording" hidden>Can’t join live? Sign up anyway, and we’ll send you the recording.</p>
         <p class="under-btn" data-recording-line="summary" hidden>Can’t join live? Sign up anyway, and we’ll email you a short summary afterward.</p>
         <p class="form-notice" id="formNotice" role="status" hidden></p>
@@ -752,13 +760,13 @@
       showNotice('Preview only: this form is not connected yet.');
       return;
     }
-    var label = submitBtn.textContent;
+    var label = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Saving your seat…';
     fetch(CONFIG.submitUrl, { method: 'POST', mode: 'no-cors', body: data, keepalive: true })
       .then(function () {
         if (!CONFIG.thankYouUrl) {
-          submitBtn.textContent = label;
+          submitBtn.innerHTML = label;
           showNotice('You’re registered. Check your email for your link.');
           form.reset();
           options.forEach(function (o) { o.classList.remove('is-checked'); });
@@ -771,7 +779,7 @@
       })
       .catch(function () {
         submitBtn.disabled = false;
-        submitBtn.textContent = label;
+        submitBtn.innerHTML = label;
         showNotice('Something went wrong saving your seat. Please check your connection and try again.', true);
       });
   });
